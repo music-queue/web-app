@@ -1,0 +1,66 @@
+.m-scene{
+  .scene-element{
+    animation-duration:0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+  }
+  .se--fadein{
+    animation-name:fadeIn;
+  }
+  .se--fadeinup{
+    animation-name:fadeInUp;
+  }
+  .se--fadeinright{
+    animation-name:fadeInRight;
+  }
+}
+
+body{
+  background-image: url('https://cdn.digitaldjtips.com/app/uploads/2012/10/16011400/How-To-Book-Guest-DJs-For-Your-Club-Night-Part-1-copy-1204x642.jpg');
+  text-align: center;
+  color: #FFFF;
+}
+
+h1{
+  font: 50px impact;
+}
+h2{
+  font: 30px Verdana;
+  color: "white";
+}
+#text1{
+  height:50px;
+  font-size: 14pt;
+}
+#club-name{
+  height:50px;
+  font-size: 14pt;
+}
+@keyframes fadeIn{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+    }
+  }
+@keyframes fadeInUp{
+  0%{
+    opacity:0;
+    transform:translate3d(0,100%,0);
+    }
+  100%{
+    opacity:1;
+    transform:none;
+    }
+  }
+@keyframes fadeInRight{
+  0%{
+    opacity:0;
+    transform:translate3d(100%,0,0);
+  }
+  100%{
+    opacity:1;
+    transform:none;
+    }
+  }

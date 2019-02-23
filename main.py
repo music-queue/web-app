@@ -1,9 +1,11 @@
 #Import statements
+from google.appengine.ext import ndb
 import webapp2
 import json
 from google.appengine.api import urlfetch
 import logging
 import jinja2
+from db import Song
 
 #Creating variables for template loading
 template_loader = jinja2.FileSystemLoader(searchpath="./")
@@ -30,9 +32,15 @@ class Playlist(webapp2.RequestHandler):
     def get(self):
         #Find and render the template
 		
-        template=template_env.get_template('html/playlist.html')
-        self.response.write(template.render())
-		
+		song = self.request.get('song-name')
+		if (song != ""):
+			song_record = Song(song_name = song)
+			song_record.put()
+			
+		list_of_entities = ndb.get_multi(list_of_keys)
+		logging.info(list_of_entities)
+		template=template_env.get_template('html/playlist.html')
+		self.response.write(template.render())
         
 #Send calls to the correct class, thereby rendering the correct template
 app = webapp2.WSGIApplication([
