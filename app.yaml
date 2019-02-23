@@ -1,0 +1,29 @@
+
+
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /png
+  static_dir: png
+
+- url: /html
+  static_dir: html
+  application_readable: true
+
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: latest
+
+- name: jinja2
+  version: latest
