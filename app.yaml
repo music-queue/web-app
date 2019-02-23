@@ -17,6 +17,9 @@ handlers:
 - url: /html
   static_dir: html
   application_readable: true
+  
+- url: /libs
+  static_dir: libs
 
 - url: /.*
   script: main.app

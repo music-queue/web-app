@@ -1,4 +1,5 @@
 #Import statements
+from __future__ import absolute_import
 from google.appengine.ext import ndb
 import webapp2
 import json
@@ -7,19 +8,24 @@ import logging
 import jinja2
 from db import Song
 
+#from google.appengine.ext import vendor
+#vendor.add('libs')
+#from gcloud import datastore
 #Creating variables for template loading
 template_loader = jinja2.FileSystemLoader(searchpath="./")
 template_env = jinja2.Environment(loader= template_loader)
 
 class MainPage(webapp2.RequestHandler):
-    """ Handles the main page (Map page), and renders it
+    """ Handles the main page, and renders it
     """
     def get(self):
         #Find and render the template
         template=template_env.get_template('html/main.html')
         self.response.write(template.render())
+ 
+
 class MainPage2(webapp2.RequestHandler):
-    """ Handles the main page (Map page), and renders it
+    """ Handles the main page, and renders it
     """
     def get(self):
         #Find and render the template
@@ -33,15 +39,29 @@ class Playlist(webapp2.RequestHandler):
         #Find and render the template
 		
 		song = self.request.get('song-name')
+		club = self.request.get('club-name')
+		
+		songs_d = {"songsss":[]}
 		if (song != ""):
-			song_record = Song(song_name = song)
+			song_record = Song(song_name = song, club_num = club)
 			song_record.put()
-			
-		list_of_entities = ndb.get_multi(list_of_keys)
-		logging.info(list_of_entities)
+			songs_d["songsss"].append(song)
+		
+		ancestor_key = ndb.Key('club', club) 
+		songs = Song.query().fetch()
+		
+		for song in songs:
+			logging.info("Next song tried: "+song.song_name)
+			logging.info(song.club_num)
+			if (song.club_num == club):
+				logging.info("Made it: "+song.song_name+ "    "+ song.club_num)
+				songs_d["songsss"].append(song.song_name)
+		
 		template=template_env.get_template('html/playlist.html')
-		self.response.write(template.render())
-        
+		self.response.write(template.render(songs_d))
+
+
+
 #Send calls to the correct class, thereby rendering the correct template
 app = webapp2.WSGIApplication([
     ('/music', MainPage2),    #Country details page
