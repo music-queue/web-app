@@ -31,18 +31,9 @@ class MainPage2(webapp2.RequestHandler):
 class Playlist(webapp2.RequestHandler):
     """ Handles the main page (Map page), and renders it
     """
+
     def get(self):
         #Find and render the templatehope
-		
-		delete = self.request.get('delete-all')
-		logging.info("TEST: "+delete)
-		if (delete != ""):
-			entities = Song.query().fetch()
-			for entity in entities:
-				entity.key.delete()
-		
-		song = self.request.get('song-name')
-		club = self.request.get('club-name')
 		
 		songs_d = {"songsss":[]}
 		if (song != ""):
@@ -52,13 +43,15 @@ class Playlist(webapp2.RequestHandler):
 		
 		ancestor_key = ndb.Key('club', club) 
 		songs = Song.query().fetch()
-		
+
 		for song in songs:
 			logging.info("Next song tried: "+song.song_name)
 			logging.info(song.club_num)
 			if (song.club_num == club):
 				logging.info("Made it: "+song.song_name+ "    "+ song.club_num)
 				songs_d["songsss"].append(song.song_name)
+		if (len(songs_d) == 0):
+			songs_d["songsss"].append("Please add a song to see your playlist!")
 		
 		template=template_env.get_template('html/playlist.html')
 		self.response.write(template.render(songs_d))
@@ -78,8 +71,6 @@ class Playlist(webapp2.RequestHandler):
 			song_record = Song(song_name = song, club_num = club)
 			song_record.put()
 			songs_d["songsss"].append(song)
-		else:
-			songs_d["songsss"].append("Please add a song to see your playlist!")
 		
 		ancestor_key = ndb.Key('club', club) 
 		songs = Song.query().fetch()
@@ -90,6 +81,8 @@ class Playlist(webapp2.RequestHandler):
 			if (song.club_num == club):
 				logging.info("Made it: "+song.song_name+ "    "+ song.club_num)
 				songs_d["songsss"].append(song.song_name)
+		if (len(songs_d) == 0):
+			songs_d["songsss"].append("Please add a song to see your playlist!")
 		
 		template=template_env.get_template('html/playlist.html')
 		self.response.write(template.render(songs_d))
