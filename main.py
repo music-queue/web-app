@@ -33,8 +33,9 @@ class Playlist(webapp2.RequestHandler):
     """
 
     def get(self):
-        #Find and render the templatehope
 		
+		song = self.request.get('song-name')
+		club = self.request.get('club-name')
 		songs_d = {"songsss":[]}
 		if (song != ""):
 			song_record = Song(song_name = song, club_num = club)
@@ -45,10 +46,7 @@ class Playlist(webapp2.RequestHandler):
 		songs = Song.query().fetch()
 
 		for song in songs:
-			logging.info("Next song tried: "+song.song_name)
-			logging.info(song.club_num)
 			if (song.club_num == club):
-				logging.info("Made it: "+song.song_name+ "    "+ song.club_num)
 				songs_d["songsss"].append(song.song_name)
 		if (len(songs_d) == 0):
 			songs_d["songsss"].append("Please add a song to see your playlist!")
@@ -58,7 +56,6 @@ class Playlist(webapp2.RequestHandler):
 		
     def post(self):
 		delete = self.request.get('delete-all')
-		logging.info("TEST: "+delete)
 		if (delete != ""):
 			entities = Song.query().fetch()
 			for entity in entities:
@@ -76,10 +73,7 @@ class Playlist(webapp2.RequestHandler):
 		songs = Song.query().fetch()
 		
 		for song in songs:
-			logging.info("Next song tried: "+song.song_name)
-			logging.info(song.club_num)
 			if (song.club_num == club):
-				logging.info("Made it: "+song.song_name+ "    "+ song.club_num)
 				songs_d["songsss"].append(song.song_name)
 		if (len(songs_d) == 0):
 			songs_d["songsss"].append("Please add a song to see your playlist!")
