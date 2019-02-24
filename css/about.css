@@ -6,6 +6,10 @@ html {
   
   body {
     margin: 0; }
+    nav{
+      position: relative;
+    }
+    
   
   article,
   aside,
@@ -16,7 +20,6 @@ html {
   header,
   hgroup,
   main,
-  nav,
   section,
   summary {
     display: block; }
@@ -206,26 +209,11 @@ html {
   h1 {
     font-size: 1.5em; }
   
-  h2 {
-    font-size: 1.4em; }
-  
-  h3 {
-    font-size: 1.2em; }
-  
-  h4 {
-    font-size: 1em; }
-  
-  h5 {
-    font-size: .8em; }
-  
-  h6 {
-    font-size: .6em; }
-  
   .heading {
     font-size: 2.3em;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'PT Serif';
     margin: .67em 0; }
     
   
@@ -296,8 +284,6 @@ html {
   /*
   * Toggle Button
   * ========================================================================== */
-  .nav-main a:not(.blog-logo) {
-    display: none; }
   
   #menu-checkbox {
     display: none; }
@@ -313,18 +299,6 @@ html {
     color: #000;
     font-size: 18px; }
   
-  #menu-checkbox:checked + .nav-main a:not(.blog-logo) {
-    display: block;
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    }
-  
-  #menu-checkbox:checked + .nav-main {
-    -webkit-flex-flow: column nowrap;
-    -ms-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-    height: 100%; }
   
   .toggle-button:after {
     content: attr(data-open);
@@ -332,9 +306,6 @@ html {
     padding: 15px;
     font-size: 1.6rem;
     text-align: center; }
-  
-  #menu-checkbox:checked + .nav-main .toggle-button:after {
-    content: attr(data-close); }
   
   @media screen and (min-width: 640px) {
     .toggle-button {
@@ -353,58 +324,22 @@ html {
   /*
   * Header Navigation
   * ========================================================================== */
-  .nav-main {
-    height: 50px;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    font-weight: 400;
-    font-family: "Roboto Condensed", sans-serif;
-    padding: 0 1rem;
-    text-transform: uppercase; }
-    .nav-main a {
-      -webkit-order: 1;
-      -ms-flex-order: 1;
-      order: 1;
-      line-height: 50px;
-      margin: auto;
-      color: #333;
-      text-decoration: none; }
-      .nav-main, .nav-main a:focus, .nav-main a:active {
-        color: #766257; }
   
-  /*
-  * Logotypes
-  * ========================================================================== */
-  .nav-main .blog-logo {
-    width: 100%;
-    line-height: 50px;
-    font-size: 18px;
-    text-decoration: none;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    border-bottom: 0;
-    text-align: center;
-    font-weight: bold; }
-  
-    
   /*
   * Aside
   * ========================================================================== */
-  
+  .sidebar {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #000;
+    display: none; }
   
   .cover {
     transition: all 0.8s ease 0s;
     text-align: center;
+    position: relative;
     background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.75)) repeat scroll 0% 0% transparent; }
   
   .cover-text {
@@ -423,6 +358,10 @@ html {
         position: absolute;
         bottom: 0; }
   
+  .sidebar,
+  .cover {
+    width: 100%;
+    height: 100vh; }
   
   /*
   * Footer
@@ -463,24 +402,6 @@ html {
   
     main {
       padding-top: 0; }
-  
-    #menu-checkbox:checked + .nav-main {
-      -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-      flex-flow: row nowrap;
-      height: 40px; }
-  
-    .nav-main {
-      text-align: center; }
-  
-    .nav-main .blog-logo {
-      -webkit-order: 0;
-      -ms-flex-order: 0;
-      order: 0;
-      width: auto; }
-  
-    .nav-main a:not(.blog-logo) {
-      display: block; }
   
     .sidebar {
       display: block; }
@@ -539,15 +460,6 @@ html {
     .main-header {
       position: static; }
   
-    .nav-main {
-      padding: 0;
-      text-align: left; }
-      .nav-main a {
-        font-size: 13px;
-        display: block;
-        padding-right: 2em;
-        margin: 0; }
-  
     .sidebar {
       width: 35%;
       height: 100%;
@@ -576,6 +488,4 @@ html {
       width: 62%;
       max-width: 740px;
       margin-left: 38%; } }
-
-      
   
