@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>Welcome</title>
+<title>Welcome to MuQueue</title>
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -26,18 +26,17 @@
               <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="register.html">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sign Up</a>
+              <a class="nav-link" href="#">Sign Up/Login</a>
             </li>
           </ul>
         </div>
     </nav>
-  </br></br></br>
+  </br></br>
     <div style="padding-top:30px;text-align:center;">
       <h2>Find Events/Parties</h2>
     </div>
@@ -56,6 +55,16 @@
         </div>
         </div>
         <div class="col-md">
+          <div class="form-check-inline">
+            <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="">Search by club
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" value="">Search by location
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -70,7 +79,7 @@
               <p class="card-subtitle mb-2 text-muted"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;(416) 469-5655</p>
               <p class="card-subtitle mb-2 text-muted">DJ: Lexx Lewis Productions</p>
               <p class="card-subtitle mb-2">Session open till: 02/24/2019</p>
-              <a href="#" class="card-link" style="float: right;">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+              <a method=GET href="/playlist" class="card-link" style="float: right;">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
             </div>
           </div>
        </div>
@@ -78,11 +87,11 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">FORTY2</h5>
-              <p class="card-subtitle mb-2 text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;42 MOWAT AVENUE, TORONTO, ON, M6K 3E8</p>
+              <p class="card-subtitle mb-2 text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;42 Mowat Avenue, Toronto, ON, M6K 3E8</p>
               <p class="card-subtitle mb-2 text-muted"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;(416) 516-7777</p>
               <p class="card-subtitle mb-2 text-muted">DJ: Tarus Entertainment</p>
               <p class="card-subtitle mb-2">Session open till: 02/28/2019</p>
-              <a href="#" class="card-link" style="float: right;">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+              <a method=GET href="/playlist" class="card-link" style="float: right;">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
             </div>
           </div>
        </div>
@@ -94,7 +103,7 @@
               <p class="card-subtitle mb-2 text-muted"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;(647) 352-0870</p>
               <p class="card-subtitle mb-2 text-muted">DJ: JAM Productions</p>
               <p class="card-subtitle mb-2">Session open till: 03/03/2019</p>
-              <a href="#" class="card-link" style="float: right;">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+              <a method=GET href="/playlist" class="card-link" style="float: right;">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
             </div>
           </div>
        </div>
@@ -110,7 +119,7 @@
             <p class="card-subtitle mb-2 text-muted"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;(416) 263-0330</p>
             <p class="card-subtitle mb-2 text-muted">DJ: DJ FYNNTASTIC</p>
             <p class="card-subtitle mb-2">Session open till: 03/05/2019</p>
-            <a href="#" class="card-link">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+            <a method=GET href="/playlist" class="card-link">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
           </div>
         </div>
      </div>
