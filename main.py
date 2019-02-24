@@ -11,16 +11,16 @@ from db import Song
 template_loader = jinja2.FileSystemLoader(searchpath="./")
 template_env = jinja2.Environment(loader= template_loader)
 
-class MainPage(webapp2.RequestHandler):
+class Register(webapp2.RequestHandler):
     """ Handles the main page, and renders it
     """
     def get(self):
         #Find and render the template
-        template=template_env.get_template('html/main.html')
+        template=template_env.get_template('html/register.html')
         self.response.write(template.render())
  
 
-class MainPage2(webapp2.RequestHandler):
+class MainPage(webapp2.RequestHandler):
     """ Handles the main page, and renders it
     """
     def get(self):
@@ -85,7 +85,8 @@ class Playlist(webapp2.RequestHandler):
 
 #Send calls to the correct class, thereby rendering the correct template
 app = webapp2.WSGIApplication([
-    ('/music', MainPage2),    #Country details page
+    ('/music', MainPage),    #Country details page
 	('/playlist', Playlist),	#Playlist details page
+	('/register', Register),
     ('/.*', MainPage),                   #Main map page/handles every call not to another page
 ], debug = True)
