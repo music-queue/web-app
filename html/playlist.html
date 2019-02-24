@@ -12,13 +12,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="../js/playlist.js"></script>
+
+
+
+
+  <link rel="stylesheet" type="text/css" media="all" href="../css/style.css">
+  <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="../js/jquery.autocomplete.min.js"></script>
+  <script type="text/javascript" src="../js/currency-autocomplete.js"></script>
+
+
+
 </head>
 
   <link rel="stylesheet" type="text/css" href="../css/playlist.css" media="screen" />
   
   <body style="display:flex;flex-direction:column; text-align:center">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">MQ</a>
+        <a class="navbar-brand" href="#">MuQueue</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,16 +50,12 @@
           </ul>
         </div>
     </nav><br><br>
-    <h2>Playlist for your club:</h2>
-
-    <br><br>   
-	<form autocomplete="off" method=GET action="/playlist">
-		<div class="autocomplete" style="width:70%">
-			<input id="myInput" style="max-width: 85%" name="myCountry" type="text"  placeholder="Search for a song"></input>
-		</div>
-	<input type="submit" value="Search"></input>
-	
-	</form>
+    <br><br>
+	 
+	 
+      <div id="searchfield">
+        <form><input type="text" class="biginput" id="autocomplete" placeholder="Search for a song"></form>
+      </div>
 	 
 	 
 	 <br><br>
