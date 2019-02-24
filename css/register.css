@@ -1,17 +1,13 @@
 
 body{
-  background: url('file:/Users/gbemi/Downloads/Boondocks-Photo.jpg')no-repeat center;
-  width:100vw;
-  height:100vh;
-  background-color: #8574b7;
-  background-position: 50% 50%;
+  background-image: url('registerBC.jpg');
   background-size: cover;
-  overflow:hidden;
-  color:white;
+  background-repeat: no-repeat;
 }
 nav{
   position: fixed;
 }
+
 .choice{
 	background-color:#0000003d;
   border: none;
@@ -25,20 +21,6 @@ nav{
   cursor: pointer;
 }
 
-h1{
-  text-align: center;
-  color: black;
-  background-color: rgba(240, 238, 238, 0.274);
-  padding: 10px;
-}
-
-body {
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
-}
 
 .form-signin {
   width: 100%;

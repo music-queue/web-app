@@ -15,7 +15,7 @@
 <link rel="stylesheet" type="text/css" href="../css/register.css" media="screen" />
 </head>
 <body>
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">MQ</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -23,13 +23,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="/music">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/register">Log in</a>
+              <a class="nav-link" href="#">Log in</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/register">Sign Up</a>
@@ -39,21 +39,27 @@
     </nav> 
     <form class="form-signin">
         <!-- <div class="photo"> <img class="mb-4" src="/Users/gbemi/Documents/GitHub/web-app/html/Screen Shot 2019-02-23 at 4.15.31 PM.png" alt="" width="72" height="72"> </div> -->
-        <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
+        <h1 class="font-weight-normal" style="color:white">Please Register</h1>
+
+        <label for="text" class="sr-only">Club name</label>
+        <input type="text" id="inputClubName" class="form-control" placeholder="DJ Name" required="" autofocus="">
 
         <label for="text" class="sr-only">DJ Name</label>
-        <input type="text" id="inputText" class="form-control" placeholder="DJ Name" required="" autofocus="">
+        <input type="text" id="inputDJName" class="form-control" placeholder="Club Name" required="">
 
-        <label for="text" class="sr-only">Club Name</label>
-        <input type="text" id="inputText" class="form-control" placeholder="Club Name" required="">
-
-        <label for="date" class="sr-only">DJ Name</label>
+        <label for="date" class="sr-only">Session deadline</label>
         <input type="date" id="inputDate" class="form-control" placeholder="Date" required="required" autofocus="">
 
-        <label for="email" class="sr-only"><Address></Address></label>
-        <input type="email" id="inputText" class="form-control" placeholder="Email" required="required">
+        <label for="street" class="sr-only">Street</label>
+        <input type="text" id="inputStreet" class="form-control" placeholder="Street" required="required">
 
-        <label for="number" class="sr-only"><Address></Address></label>
+        <label for="street" class="sr-only">State</label>
+        <input type="text" id="inputState" class="form-control" placeholder="State" required="required">
+
+        <label for="street" class="sr-only">Postal Code</label>
+        <input type="text" id="inputPC" class="form-control" placeholder="Postcal Code" required="required">
+
+        <label for="number" class="sr-only">Phone Number</label>
         <input type="tel" id="inputText" class="form-control" placeholder="Phone Number" required="required" autofocus="">
 
         <!-- <div class="checkbox mb-3">
@@ -61,8 +67,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label> -->
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-        <p class="mt-5 mb-3 text-muted">© 2018-2019</p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register Event</button>
       </form>
 
 
