@@ -16,26 +16,11 @@
 }
 
 body{
-  background: url('https://www.clubdancemixes.com/wp-content/uploads/2013/08/Screen-Shot-2013-08-20-at-11.26.17-PM.png')no-repeat center;
-  width:100vw;
-  height:100vh;
-  background-color: #8574b7;
-  background-position: 50% 50%;
+  background-image: url('https://www.clubdancemixes.com/wp-content/uploads/2013/08/Screen-Shot-2013-08-20-at-11.26.17-PM.png');
   background-size: cover;
-  overflow:hidden;
+  background-repeat: no-repeat;
 }
-.choice{
-	background-color: #0000003d;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20pt;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+
 
 h1{
   font: 50px impact;
@@ -82,4 +67,21 @@ h2{
     opacity:1;
     transform:none;
     }
+  }
+
+  .eventRow {
+    padding-top: 30px;
+    padding-bottom:30px;
+  }
+  
+  .card {
+    margin:10px;
+    height: 250px;
+    opacity: 0.7;
+  }
+
+  .card-link {
+    position: absolute;
+    right:5px; 
+    bottom:5px;
   }
