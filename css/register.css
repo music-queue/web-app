@@ -1,31 +1,19 @@
-.m-scene{
-  .scene-element{
-    animation-duration:0.25s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-  }
-  .se--fadein{
-    animation-name:fadeIn;
-  }
-  .se--fadeinup{
-    animation-name:fadeInUp;
-  }
-  .se--fadeinright{
-    animation-name:fadeInRight;
-  }
-}
 
 body{
-  background: url('https://www.clubdancemixes.com/wp-content/uploads/2013/08/Screen-Shot-2013-08-20-at-11.26.17-PM.png')no-repeat center;
+  background: url('file:/Users/gbemi/Downloads/Boondocks-Photo.jpg')no-repeat center;
   width:100vw;
   height:100vh;
   background-color: #8574b7;
   background-position: 50% 50%;
   background-size: cover;
   overflow:hidden;
+  color:white;
+}
+nav{
+  position: fixed;
 }
 .choice{
-	background-color: #0000003d;
+	background-color:#0000003d;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -38,48 +26,71 @@ body{
 }
 
 h1{
-  font: 50px impact;
+  text-align: center;
+  color: black;
+  background-color: rgba(240, 238, 238, 0.274);
+  padding: 10px;
 }
-h2{
-  font: 30px Verdana;
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
 }
-#text1{
-  height:50px;
-  font-size: 14pt;
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
 }
-#club-name{
-  height:50px;
-  font-size: 14pt;
+.form-signin .checkbox {
+  font-weight: 400;
 }
-#button{
-  height:80px;
-  font: 18pt tahoma;
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
 }
-@keyframes fadeIn{
-  0%{
-    opacity:0;
-  }
-  100%{
-    opacity:1;
-    }
-  }
-@keyframes fadeInUp{
-  0%{
-    opacity:0;
-    transform:translate3d(0,100%,0);
-    }
-  100%{
-    opacity:1;
-    transform:none;
-    }
-  }
-@keyframes fadeInRight{
-  0%{
-    opacity:0;
-    transform:translate3d(100%,0,0);
-  }
-  100%{
-    opacity:1;
-    transform:none;
-    }
-  }
+.form-signin .form-control:focus {
+  z-index: 3;
+}
+.form-signin input[type="text"] {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.form-signin input[type="date"] {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.form-signin input[type="tel"] {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  margin-bottom: 20px;
+}
+
