@@ -11,10 +11,11 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">MQ</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,38 +23,97 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="/music">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/register">Log in</a>
+              <a class="nav-link" href="register.html">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/register">Sign Up</a>
+              <a class="nav-link" href="#">Sign Up</a>
             </li>
           </ul>
         </div>
     </nav>
-  </br></br><br>
-    <div>
-      <h2 style="text-align:center;">Find your Event/Party</h2>
-    </div><br><br>
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for events">
-        <div class="input-group-append">
-          <button class="btn btn-secondary" type="button">
-            <i class="fa fa-search"></i>
-          </button>
-        </div><br><br><br>
-    </div style="size">
-	<form method=GET action="/playlist">
-	<div class="container" style = "font-size:20pt;	display:flex;flex-direction:column;color:#FFFF;text-align:center; ">
-        <input type="submit" name="choice1" value="Rooftop Club" class="choice" ></input>
-        <input type="submit" name="choice2" value="Dance Party" class="choice" ></input>
-        <input type="submit" name="choice3" value="Up in the Sky" class="choice"></input>
+  </br></br></br>
+    <div style="padding-top:30px;text-align:center;">
+      <h2>Find Events/Parties</h2>
     </div>
-	</form>
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+        </div>
+        <div class="col-md">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for events">
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+        </div>
+        </div>
+        <div class="col-md">
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="eventsGrid">
+      <div class="row eventRow">
+        <div class="col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">REBEL</h5>
+              <p class="card-subtitle mb-2 text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;11 Polson Street, Toronto, ON, M5A 1A4</p>
+              <p class="card-subtitle mb-2 text-muted"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;(416) 469-5655</p>
+              <p class="card-subtitle mb-2 text-muted">DJ: Lexx Lewis Productions</p>
+              <p class="card-subtitle mb-2">Session open till: 02/24/2019</p>
+              <a href="#" class="card-link" style="float: right;">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+       </div>
+       <div class="col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">FORTY2</h5>
+              <p class="card-subtitle mb-2 text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;42 MOWAT AVENUE, TORONTO, ON, M6K 3E8</p>
+              <p class="card-subtitle mb-2 text-muted"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;(416) 516-7777</p>
+              <p class="card-subtitle mb-2 text-muted">DJ: Tarus Entertainment</p>
+              <p class="card-subtitle mb-2">Session open till: 02/28/2019</p>
+              <a href="#" class="card-link" style="float: right;">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+       </div>
+       <div class="col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">BABY HUEY</h5>
+              <p class="card-subtitle mb-2 text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;11 Ossington Ave, Toronto, ON, M6J 2Z4</p>
+              <p class="card-subtitle mb-2 text-muted"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;(647) 352-0870</p>
+              <p class="card-subtitle mb-2 text-muted">DJ: JAM Productions</p>
+              <p class="card-subtitle mb-2">Session open till: 03/03/2019</p>
+              <a href="#" class="card-link" style="float: right;">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+       </div>
+    </div> 
+  </div>
+  <div class="container" id="eventsGrid">
+    <div class="row eventRow">
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-body" style="position: relative;">
+            <h5 class="card-title">CUBE</h5>
+            <p class="card-subtitle mb-2 text-muted"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;314 Queen Street West, Toronto, ON, M5V 2A2</p>
+            <p class="card-subtitle mb-2 text-muted"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;(416) 263-0330</p>
+            <p class="card-subtitle mb-2 text-muted">DJ: DJ FYNNTASTIC</p>
+            <p class="card-subtitle mb-2">Session open till: 03/05/2019</p>
+            <a href="#" class="card-link">Join session<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+     </div>
+  </div>
 </body>
 </html>
